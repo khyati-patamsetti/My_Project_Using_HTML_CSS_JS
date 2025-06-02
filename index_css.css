@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.login-form, .sign-up-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h1, .sign-up-details h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.login-form label, .sign-up-details label {
+    color: white;
+    text-align: left;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-form input, .sign-up-details input {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: rgb(15, 15, 15);
+}
+
+.login-form input:hover, .sign-up-details input:hover {
+    background: #ede6e6;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login-form button, .sign-up-details button {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0 5px;
+}
+.sign-up-details button {
+    width: 60%;
+}
+.login-form button:hover, .sign-up-details button:hover {
+    background: #e5e4e4;
+    color: black;
+}
+
+.sign-up-details {
+    display: none; 
+}

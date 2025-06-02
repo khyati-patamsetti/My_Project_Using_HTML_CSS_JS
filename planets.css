@@ -1,0 +1,335 @@
+body{
+    margin: 0 0;
+    padding: 0 0;
+    overflow: hidden;
+}
+.cont_p{
+    margin-top: 0;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+.container{
+    font-size: 6px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+img{
+    height: 130%;
+    width: 130%;
+}
+.sun{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15em;
+    left: 12em;
+    width: 15em;
+    height: 8em;
+    border-radius: 50%;
+} 
+.mercury,.venus,.mars,.earth,.moon,.mars,.jupiter,.saturn,
+.uranus,.neptune,.pluto{
+     position:absolute;
+     border-style: solid;
+     border-color: white transparent transparent transparent;
+     border-width: 0.1em 0.1em 0 0;
+     border-radius: 50%; 
+}
+.mercury{
+    top: 12em;
+    left: 12em;
+    width: 15em;
+    height: 15em;
+    animation: orbit 68.7s linear infinite;
+}
+.venus{
+    top: 8em;
+    left: 8em;
+    width: 23em;
+    height: 23em;
+    animation: orbit 48.7s linear infinite;
+}
+.earth{
+    top: 4em;
+    left: 4em;
+    width: 32em;
+    height: 32em;
+    animation: orbit 36.5s linear infinite;
+}
+.moon{
+    top: 2.5em;
+    right: 1em;
+    width: 6.5em;
+    height: 6.5em;
+    animation: orbit 2.7s linear infinite;
+}
+.mars{
+    top: -1em;
+    left: -1em;
+    width: 42em;
+    height:42em;
+    animation: orbit 26.5s linear infinite;
+}
+.jupiter{
+    top: -10em;
+    left: -10em;
+    width: 60em;
+    height: 60em;
+    animation: orbit 21s linear infinite;
+}
+.saturn{
+    top: -18em;
+    left: -18em;
+    width: 75em;
+    height: 75em;
+    animation: orbit 17s linear infinite;
+}
+.uranus{
+    top: -25em;
+    left: -25em;
+    width: 90em;
+    height: 90em;
+    animation: orbit 19s linear infinite;
+}
+.neptune{
+    top: -35em;
+    left: -35em;
+    width: 110em;
+    height: 110em;
+    animation: orbit 15s linear infinite;
+}
+.pluto{
+    top: -45em;
+    left: -45em;
+    width: 130em;
+    height: 130em;
+    animation: orbit 18s linear infinite;
+}
+.mercury::before,.venus::before,.earth::before,.moon::before,.mars::before,.jupiter::before,.saturn::before
+,.uranus::before,.neptune::before,.pluto::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 30s linear infinite;
+}
+.mercury::before{
+    top: 2.5em;
+    right:-1em;
+    width: 4em;
+    height: 4em;
+    background-image: url(./images/mercury.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.venus::before{
+    top: 8em;
+    right:-2.5em;
+    width: 8em;
+    height: 5em;
+    background-image: url(./images/venus.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.earth::before{
+    top: 3.2em;
+    right:2em;
+    width: 5em;
+    height: 5em;
+    background-image: url(./images/earth.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.moon::before{
+    top: 0.8em;
+    right:-0.7em;
+    width: 2.5em;
+    height: 2.5em;
+    background-image: url(./images/moonn.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.mars::before{
+    top: 6em;
+    right:0em;
+    width: 8em;
+    height: 6em;
+    background-image: url(./images/mars.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.jupiter::before{
+    top: 12em;
+    right:0.5em;
+    width: 11em;
+    height: 7em;
+    background-image: url(./images/jupiter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.saturn::before{
+    top: 10em;
+    right:6em;
+    width: 6em;
+    height: 6em;
+    background-image: url(./images/saturn.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.uranus::before{
+    top: 18em;
+    right:3em;
+    width: 8em;
+    height: 8em;
+    background-image: url(./images/uranus.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.neptune::before{
+    top: 10em;
+    right:12em;
+    width: 12em;
+    height: 12em;
+    background-image: url(./images/neptune.png);
+    background-size: 100%;
+    background-repeat: cover;
+    background-repeat: no-repeat;
+
+}
+.pluto::before{
+    top: 16em;
+    right:18em;
+    width: 5em;
+    height: 5em;
+    background-image: url(./images/pluto.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.star{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+}
+@keyframes orbit{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.solar {
+    height: 107svh; 
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: black;
+    padding: 20px; 
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.solsys {
+    background: -webkit-linear-gradient(red, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px; 
+    text-align: center; 
+}
+
+.anime, .mer1, .ven1, .ear1, .mar1, .jup1, .sat1, .uran1, .nep1, .plut1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px; 
+    border-radius: 5px;
+    height: 40px; 
+    width: 150px; 
+    color: black;
+    background: linear-gradient(red, orange);
+    transition: transform 0.3s ease; 
+}
+
+.anime:hover, .mer1:hover, .ven1:hover, .ear1:hover, .mar1:hover, .jup1:hover, .sat1:hover, .uran1:hover, .nep1:hover, .plut1:hover {
+    transform: scale(1.15); 
+}
+
+@media (max-width: 768px) {
+    .solar {
+        padding: 10px; 
+    }
+    .solsys {
+        font-size: 50px; 
+    }
+}
+#merc , #ven , #ear, #mar, #jup, #sat, #uran, #nep, #plut{
+    position: relative;
+    height: 100svh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#main_p{
+    width: 50%;
+    height: 100svh;
+    display: flex;
+    padding-left: 100px;
+    flex-direction: column;
+   justify-content: center;
+}
+.merc_n , .ven_n , .ear_n , .mar_n , .jup_n , .sat_n , .uran_n , .nep_n , .plut_n{
+    font-size: 80px;
+    color: white;
+}
+.merc_t ,.ven_t , .ear_t , .mar_t , .jup_t , .sat_t , .uran_t , .nep_t , .plut_t{
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+}
+@media (max-width: 1024px) {
+    .cont_p{
+        height: 60svh;
+        width: 104%;
+    }
+    #merc , #ven , #ear, #mar, #jup, #sat, #uran, #nep, #plut{
+        height: 60svh;
+        width: 104%;
+    }
+    video{
+        margin-left: 320px;
+        height: 300px;
+        width:300px ;
+    }
+    #main_p{
+        margin-top: -200px;
+        width: 75%;
+        height: 50svh;
+        display: flex;
+    }
+    .merc_n , .ven_n , .ear_n , .mar_n , .jup_n , .sat_n , .uran_n , .nep_n , .plut_n{
+        font-size: 70px;
+    }
+    .merc_t ,.ven_t , .ear_t , .mar_t , .jup_t , .sat_t , .uran_t , .nep_t , .plut_t{
+        font-size: 30px;
+    }
+}

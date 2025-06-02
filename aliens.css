@@ -1,0 +1,239 @@
+/* body{
+    margin: 0 0;
+    padding: 0 0;
+}
+.alien{
+    position: relative; 
+    overflow: hidden;
+    height: 100svh;
+    width: 100%;
+    background-color: #090914;
+}
+.alien_t{
+    margin: 50px 0px;
+    text-align: center;
+    background: -webkit-linear-gradient(#DED3B6,#DED3B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+}
+#ali_img{
+    height: 400px;
+    width: 300px;
+    margin: 0px 50px;
+    animation: ani_scale 2s linear infinite;
+}
+.know{
+    background: -webkit-linear-gradient(#DED3B6,#DED3B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -300px;
+    margin-left: 600px;
+    text-decoration-line: block;
+    text-shadow: 2px 2px  #DED3B6;
+    font-size: 70px;
+    cursor: pointer;
+}
+.more_text{
+    margin-top: -380px;
+    margin-left: 400px;
+    height: 350px;
+    width: 600px;
+    text-align: justify;
+    font-size: 18px;
+    background: -webkit-linear-gradient(#DED3B6,#DED3B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+    animation: ani_text 3s linear ;
+} */
+
+
+body{
+    margin: 0 0;
+    padding: 0 0;
+}
+.alien{
+    position: relative; 
+    overflow: hidden;
+    height: 100svh;
+    width: 100%;
+    background-color: #090914;
+}
+.alien_t{
+    margin: 4% 0;
+    text-align: center;
+    background: -webkit-linear-gradient(#DED3B6,#DED3B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+}
+#ali_img{
+    height: 55%;
+    width: 20%;
+    margin: 1% 10%;
+    animation: ani_scale 2s linear infinite;
+}
+.know{
+    background: -webkit-linear-gradient(#DED3B6,#DED3B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -17%;
+    margin-left: 40%;
+    text-decoration-line: block;
+    text-shadow: 2px 2px  #DED3B6;
+    font-size: 70px;
+    cursor: pointer;
+}
+.more_text{
+    margin-top: -30%;
+    margin-left: 40%;
+    height: 60%;
+    width: 50%;
+    text-align: justify;
+    font-size: 19px;
+    background: -webkit-linear-gradient(#DED3B6,#DED3B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+    animation: ani_text 3s linear ;
+}
+.more_text p{
+    font-size: 25px;
+}
+@media screen and (max-width:800px) {
+    .alien{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } 
+}
+@media (max-width:768px){
+    .alien_t{
+        margin: 0px 0px;
+        font-size: 40px;
+    }
+    #ali_img{
+        height: 200px;
+        width: 150px;
+        margin: 17px 112px;
+    }
+    .know{
+        margin-top: 150px;
+        margin-left: 10px;
+        font-size: 30px;
+    }
+    .more_text{
+        margin-top: 5px;
+        margin-left: 20px;
+        height: 450px;
+        width: 350px;
+        font-size: 15.7px;
+    }
+}
+@keyframes ani_text{
+    0%{
+         transform: scale(0);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes ani_scale{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.alien1{
+    height: 95.5svh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+     transition-duration: 3s;
+}
+.ali-about{
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 600px;
+    transition-duration: 3s;
+}
+.al img{
+    position: absolute;
+    top: 400px;
+    left: 470px;
+    height: 300px;
+    width: 600px;
+    cursor: pointer;
+    transition-duration: 3s;
+}
+  .typing-demo1{
+    position: absolute;
+    top: 250px;
+    left: 1000px;
+  }
+  .typing-demo{
+    position: absolute;
+    top: 150px;
+    left: 80px;
+  }
+  .typing-demo ,.typing-demo1{
+    width: 100%;
+    height: 100svh;
+    color: white;
+    animation: typing 6s steps(50), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    text-align: justify;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 17px;
+    display: none;
+    transition-duration: 2s;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      background-color: transparent;
+    }
+  }
+  @media (max-width:768px){
+    .ali-about{
+        font-size: 40px;
+        top: 0px;
+        left: 112px;
+    }
+    .al img{
+        top: 530px;
+        left: 0px;
+        height: 200px;
+        width: 400px;
+    }
+      .typing-demo1{
+    position: absolute;
+    top: 325px;
+    left: 30px;
+  }
+  .typing-demo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+    .typing-demo ,.typing-demo1{
+        font-size: 12px;
+      }
+  }
